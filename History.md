@@ -87,6 +87,8 @@
 
 - If you are working with enrollments in user accounts, do note that the enrollment token handling is now separate from reset password token. The token is now under `services.password.enroll`, so adjust your code accordingly if you use it.
 
+- Since the `http` now uses `fetch` internally instead of `request`, the `npmRequestOptions` parameter is no longer supported.
+
 ### Migration steps
 
 - As Node.js version was upgraded we recommend that you remove your `node_modules` folder (`rm -rf node_modules`) and run `meteor npm i` to be sure you compile all the binary dependencies again using the new Node.js version.
